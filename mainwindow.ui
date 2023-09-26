@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout" columnstretch="0,1,2,2">
+      <item row="0" column="3">
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="title">
+         <string>Captured</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_7" rowstretch="5,1">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="0">
+            <widget class="QLabel" name="steadyImageLabel">
+             <property name="text">
+              <string>-</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <layout class="QGridLayout" name="gridLayout_8" columnstretch="5,1">
+           <item row="0" column="1">
+            <widget class="QPushButton" name="saveAsBtn">
+             <property name="text">
+              <string>Save Image As...</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QScrollArea" name="scrollArea">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <widget class="QWidget" name="scrollAreaWidgetContents">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>355</width>
+                <height>74</height>
+               </rect>
+              </property>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QGroupBox" name="groupBox">
+        <property name="title">
+         <string>Preview</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4" rowstretch="5,1">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <widget class="QLabel" name="liveImageLabel">
+             <property name="text">
+              <string>-</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="0" column="2">
+            <layout class="QGridLayout" name="gridLayout_9">
+             <item row="0" column="0">
+              <widget class="QPushButton" name="captureBtn">
+               <property name="text">
+                <string>Capture</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="0" column="0">
+            <widget class="QPushButton" name="settingBtn">
+             <property name="text">
+              <string>Setting</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="Line" name="line">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <layout class="QGridLayout" name="gridLayout_11">
+        <item row="1" column="0">
+         <widget class="QPushButton" name="closeSettingBtn">
+          <property name="text">
+           <string>Close Setting</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QTabWidget" name="settingTabWidget">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tabImage">
+           <attribute name="title">
+            <string>Image Setting</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_14">
+            <item row="0" column="0">
+             <widget class="QGroupBox" name="groupBox_3">
+              <property name="title">
+               <string>Image Processing</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_12">
+               <item row="0" column="0">
+                <widget class="QScrollArea" name="scrollArea_2">
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="scrollAreaWidgetContents_2">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>180</width>
+                    <height>497</height>
+                   </rect>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_17">
+                   <item row="11" column="0">
+                    <widget class="QLabel" name="label">
+                     <property name="text">
+                      <string>Brightness:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="26" column="0">
+                    <widget class="QCheckBox" name="gaussBlurCheckBox">
+                     <property name="text">
+                      <string>Gaussian Blur</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="12" column="0">
+                    <widget class="QSlider" name="brightnessSlider">
+                     <property name="minimum">
+                      <number>-100</number>
+                     </property>
+                     <property name="maximum">
+                      <number>100</number>
+                     </property>
+                     <property name="value">
+                      <number>0</number>
+                     </property>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="24" column="0">
+                    <widget class="QCheckBox" name="adaptiveDenoiseCheckBox">
+                     <property name="text">
+                      <string>Adaptive Denoise</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="18" column="0">
+                    <widget class="QSlider" name="sharpnessSlider">
+                     <property name="minimum">
+                      <number>-50</number>
+                     </property>
+                     <property name="maximum">
+                      <number>50</number>
+                     </property>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="25" column="0">
+                    <widget class="QCheckBox" name="bilateralFiltCheckBox">
+                     <property name="text">
+                      <string>Bilateral Filt</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="20" column="0">
+                    <widget class="QSlider" name="rotationSlider">
+                     <property name="minimum">
+                      <number>-180</number>
+                     </property>
+                     <property name="maximum">
+                      <number>180</number>
+                     </property>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="17" column="0">
+                    <widget class="QLabel" name="label_8">
+                     <property name="text">
+                      <string>Sharpness:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="14" column="0">
+                    <widget class="QSlider" name="contrastSlider">
+                     <property name="minimum">
+                      <number>-200</number>
+                     </property>
+                     <property name="maximum">
+                      <number>200</number>
+                     </property>
+                     <property name="pageStep">
+                      <number>2</number>
+                     </property>
+                     <property name="value">
+                      <number>0</number>
+                     </property>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="19" column="0">
+                    <widget class="QLabel" name="label_9">
+                     <property name="text">
+                      <string>Rotation:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="23" column="0">
+                    <widget class="QCheckBox" name="blurCheckBox">
+                     <property name="text">
+                      <string>Blur</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="13" column="0">
+                    <widget class="QLabel" name="label_2">
+                     <property name="text">
+                      <string>Contrast:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="16" column="0">
+                    <widget class="QSlider" name="exposureSlider">
+                     <property name="minimum">
+                      <number>-1500</number>
+                     </property>
+                     <property name="maximum">
+                      <number>1500</number>
+                     </property>
+                     <property name="pageStep">
+                      <number>2</number>
+                     </property>
+                     <property name="value">
+                      <number>0</number>
+                     </property>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QCheckBox" name="grayscaleCheckBox">
+                     <property name="text">
+                      <string>Grayscale</string>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="22" column="0">
+                    <widget class="QCheckBox" name="medianFiltCheckBox">
+                     <property name="text">
+                      <string>Median Filt</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="15" column="0">
+                    <widget class="QLabel" name="label_3">
+                     <property name="text">
+                      <string>Exposure:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="27" column="0">
+                    <widget class="QCheckBox" name="gaussLowpassCheckBox">
+                     <property name="text">
+                      <string>Gaussian Lowpass</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="21" column="0">
+                    <widget class="QCheckBox" name="claheCheckBox">
+                     <property name="text">
+                      <string>CLAHE</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QGroupBox" name="groupBox_4">
+              <property name="title">
+               <string>Camera Setting</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_15">
+               <item row="0" column="0">
+                <widget class="QScrollArea" name="scrollArea_3">
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="scrollAreaWidgetContents_3">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>-56</y>
+                    <width>180</width>
+                    <height>207</height>
+                   </rect>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_18" columnstretch="0">
+                   <item row="7" column="0">
+                    <layout class="QGridLayout" name="gridLayout_10" columnstretch="1,1" columnminimumwidth="1,0">
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_5">
+                       <property name="text">
+                        <string>Focus:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLineEdit" name="focusLineEdit"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item row="12" column="0">
+                    <layout class="QGridLayout" name="gridLayout_20" columnstretch="1,1" columnminimumwidth="1,0">
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_7">
+                       <property name="text">
+                        <string>Auto Gain:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QComboBox" name="cameraAutoGainCombo"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item row="11" column="0">
+                    <widget class="Line" name="line_2">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="9" column="0">
+                    <layout class="QGridLayout" name="gridLayout_16" columnstretch="1,1" columnminimumwidth="1,0">
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_6">
+                       <property name="text">
+                        <string>Zoom:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLineEdit" name="zoomLineEdit"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item row="10" column="0">
+                    <widget class="QSlider" name="zoomSlider">
+                     <property name="maximum">
+                      <number>20000</number>
+                     </property>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="13" column="0">
+                    <layout class="QGridLayout" name="gridLayout_19" columnstretch="1,1" columnminimumwidth="1,0">
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_4">
+                       <property name="text">
+                        <string>Gain:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLineEdit" name="camGainLineEdit"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item row="8" column="0">
+                    <widget class="QSlider" name="focusSlider">
+                     <property name="maximum">
+                      <number>20000</number>
+                     </property>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tabABCHardware">
+           <attribute name="title">
+            <string>ABC Setting</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_13">
+            <item row="0" column="0">
+             <widget class="QGroupBox" name="groupBox_5">
+              <property name="title">
+               <string>ABC Mode:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QGroupBox" name="groupBox_6">
+              <property name="title">
+               <string>Command Setting:</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
