@@ -47,6 +47,7 @@ class mainwindow(QMainWindow):
         # start the thread
         self.LiveImageThread.start()
         self.ui.settingTabWidget.hide()
+        self.ui.closeSettingBtn.hide()
         
     def uiInitialize(self):
         self.setup_ui_connection()
@@ -68,6 +69,7 @@ class mainwindow(QMainWindow):
         self.ui.settingBtn.clicked.connect(self.on_settingBtn_clicked)
         self.ui.captureBtn.clicked.connect(self.on_captureBtn_clicked)
         self.ui.saveAsBtn.clicked.connect(self.on_saveAsBtn_clicked)
+        self.ui.closeSettingBtn.clicked.connect(self.on_closeSettingBtn_clicked)
 
     def set_radio_btns_connection(self):
         pass #self.ui.MoveForDuration.clicked.connect(lambda: self.on_radio_btn_clicked(Mode.MOVE_IN_DURATION))
@@ -139,8 +141,17 @@ class mainwindow(QMainWindow):
     def on_settingBtn_clicked(self):
         if (self.ui.settingTabWidget.isHidden()):
             self.ui.settingTabWidget.show()
+            self.ui.closeSettingBtn.show()
+            self.ui.gridLayout.setColumnStretch(1, 1)
+            self.ui.gridLayout.setColumnStretch(2, 2)
+            self.ui.gridLayout.setColumnStretch(3, 2)
         else:
             self.ui.settingTabWidget.hide()
+            self.ui.closeSettingBtn.hide()
+
+    def on_closeSettingBtn_clicked(self):    
+        self.ui.settingTabWidget.hide()
+        self.ui.closeSettingBtn.hide()
 
     def on_captureBtn_clicked(self):
         self.ui.steadyImageLabel.setPixmap(self.currentFrame)
@@ -243,5 +254,5 @@ class mainwindow(QMainWindow):
 if __name__=="__main__":
     app = QApplication(sys.argv)
     a = mainwindow()
-    a.show()
+    a.showMaximized()
     sys.exit(app.exec_())

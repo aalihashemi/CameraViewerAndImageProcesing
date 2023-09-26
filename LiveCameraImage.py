@@ -7,9 +7,9 @@ from ImageProcessing import ImageProcessing
 from ImageProcessHandler import ImageProcessHandler
 from MACRO import *
 
-#if (CURRENT_CAMERA == RPI_CAM_ID):
-from picamera2 import MappedArray, Picamera2, Preview
-from picamera2.encoders import H264Encoder
+if (CURRENT_CAMERA == RPI_CAM_ID):
+    from picamera2 import MappedArray, Picamera2, Preview
+    from picamera2.encoders import H264Encoder
 
 
 

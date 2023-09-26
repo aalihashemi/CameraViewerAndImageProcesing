@@ -1,6 +1,7 @@
-CURRENT_CAMERA = 1 # 0: webcam , 1:rpi cam
+
 WEBCAM_ID = 0
 RPI_CAM_ID = 1
+CURRENT_CAMERA = WEBCAM_ID # 0: webcam , 1:rpi cam
 
 #### Filters Parameters - Default Values ####
 MEDIAN_FILTER_DEFAULT_KERNEL_SIZE = 3
